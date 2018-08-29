@@ -32,13 +32,7 @@ done
 # download dumux
 git clone -b releases/"$DUMUX_VERSION" https://git.iws.uni-stuttgart.de/dumux-repositories/dumux.git src/dumux
 
-# don't they ever test their own stuff?
-#sed -i "s,adaptationhelper,adaptionhelper," src/dumux/dumux/implicit/adaptive/CMakeLists.txt
-
 # build and install dumux
-# -DCMAKE_CXX_FLAGS='-stdlib=libc++' -DCMAKE_EXE_LINKER_FLAGS='-lc++abi' 
 mkdir -p bld/dumux
 (cd bld/dumux
- cmake ../../src/dumux -DCMAKE_INSTALL_PREFIX=${TARGET} -Ddune-common_DIR=$(readlink -f ../dune-common) -Ddune-grid_DIR=$(readlink -f ../dune-grid) -Ddune-geometry_DIR=$(readlink -f ../dune-geometry) -DUG_DIR=${TARGET}/lib/cmake/ug && make)
-
-
+ cmake ../../src/dumux -DCMAKE_INSTALL_PREFIX=${TARGET} -Ddune-common_DIR=$(readlink -f ../dune-common) -Ddune-grid_DIR=$(readlink -f ../dune-grid) -Ddune-geometry_DIR=$(readlink -f ../dune-geometry) -DUG_DIR="${TARGET}"/lib/cmake/ug && make)

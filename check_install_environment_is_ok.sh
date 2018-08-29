@@ -8,6 +8,8 @@ if [[ -z $DUNE_DUMUX_INSTALL_DIR ]] ; then
 fi
 packages=( autoconf bison cmake g++ libblas-dev libopenmpi-dev libtool make flex )
 
+DUNE_DUMUX_INSTALL_DIR=${DUNE_DUMUX_INSTALL_DIR%/}  # strip possible trailing slash
+
 echo "Checking for installed packages.."
 for package in "${packages[@]}" ; do
     echo -n "..$package"

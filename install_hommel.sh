@@ -1,5 +1,5 @@
 #! /bin/bash
-# Original script by Roland Kaufmann
+# Original script written by Roland Kaufmann
 
 ./check_install_environment_is_ok.sh || exit 1
 

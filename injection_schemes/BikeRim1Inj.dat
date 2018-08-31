@@ -1,0 +1,25 @@
+
+BikeRimReactor1 Injection strategy
+
+injectionEnd: end times of the injections. time in hours!
+injectionType: specifies the type of injection during the corresponding episode: -99: no flow, 1: calcium rich, 2: inoculation, 3: resuscitation/Ca-free growth medium
+!!do NOT remove the # after the input data!
+injectionEnd [h], injectionType
+
+EndTimes
+0.82
+16.52
+28.52
+40.52
+52.52
+66.90
+#
+
+InjectionTypes
+2
+-99
+3
+-99
+1
+-99
+#

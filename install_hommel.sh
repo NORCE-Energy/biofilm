@@ -1,7 +1,8 @@
 #! /bin/bash
 # Original script written by Roland Kaufmann
 
-REPODIR="$PWD"
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+REPODIR="$SCRIPT_DIR"
 NAME=Hommel2015a
 WHAT_TO_INSTALL="biofilm simulator ($NAME)" ./check_install_environment_is_ok.sh \
     || exit 1

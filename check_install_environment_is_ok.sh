@@ -20,7 +20,7 @@ DUNE_DUMUX_INSTALL_DIR=${DUNE_DUMUX_INSTALL_DIR%/}  # strip possible trailing sl
 echo "Checking for installed packages.."
 for package in "${packages[@]}" ; do
     echo -n "..$package"
-    dpkg -l "$package" >/dev/null 2>&1
+    dpkg -s "$package" >/dev/null 2>&1
     if (($? == 0 )) ; then
         echo "..installed"
     else

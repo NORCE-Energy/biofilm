@@ -1,7 +1,9 @@
 #! /bin/bash
 # Original script written by Roland Kaufmann
 
-WHAT_TO_INSTALL="UG" ./check_install_environment_is_ok.sh || exit 1
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+REPODIR="$SCRIPT_DIR"
+WHAT_TO_INSTALL="UG" "$REPODIR"/check_install_environment_is_ok.sh || exit 1
 TARGET="$DUNE_DUMUX_INSTALL_DIR"
 cd "$TARGET"
 

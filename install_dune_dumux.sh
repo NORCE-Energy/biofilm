@@ -1,7 +1,9 @@
 #! /bin/bash
 # Original script by Roland Kaufmann
 
-WHAT_TO_INSTALL="DUNE and DuMuX" ./check_install_environment_is_ok.sh || exit 1
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+REPODIR="$SCRIPT_DIR"
+WHAT_TO_INSTALL="DUNE and DuMuX" "$REPODIR"/check_install_environment_is_ok.sh || exit 1
 
 DUNE_VERSION="2.3"
 DUMUX_VERSION="2.7"

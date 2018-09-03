@@ -71,8 +71,8 @@ done
 # Instead we will use the columnproblemgeneral.hh:
 
 (cd src/"$NAME"/appl/co2/biomin
- perl -pi -E 's{^//#include "columnproblemgeneral.hh"}
+ perl -pi -E 's{^//\s*#include\s+"columnproblemgeneral.hh"}
                {#include "columnproblemgeneral.hh"};
-              s{^#include "initialbiofilmcolumnproblem.hh"}
-               {^//#include "initialbiofilmcolumnproblem.hh"}' biomin.cc
+              s{^#include\s+"initialbiofilmcolumnproblem.hh"}
+               {//#include "initialbiofilmcolumnproblem.hh"}' biomin.cc
  )
